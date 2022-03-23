@@ -1,0 +1,30 @@
+$primaryColor:rgb(23, 59, 114);
+$itemDobColor:#eeff3e;
+$itemTimeLeftColor:#aecaf3;
+
+
+
+.navbar{
+    color:$primaryColor;
+}
+.representation{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    color:$primaryColor;
+    
+}
+
+.item{
+    border:1px solid red; 
+    margin:3px;
+    width:12px;
+    height:12px;
+    text-align: center;
+}
+.dateOfBirthItem{
+    background-color:$itemDobColor;
+}
+.timeToGoItem{
+    background-color:$itemTimeLeftColor;
+}

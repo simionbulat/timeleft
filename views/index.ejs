@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate')%>
+
+    <div class="main">
+        <form action="/results" method="POST" class="info-form" enctype="application/x-www-form-urlencoded">
+            <label for="date-of-birth">When were you born ?</label>
+            <br>
+            <input required type="date" id="date-of-birth" name="date_of_birth" min="1922-01-01" max="2021-12-31">
+            <br>
+            <label for="location">Where ?</label>
+            <br>
+            <label for="sex">S?
+            </label>
+            <select name="sex" id="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+
+            <select name="location" id="location" required>
+                <br>
+                <option value="">--Please choose an option--</option>
+                <% for (let country in data.COUNTRY_NAME) { %>
+                    <option>
+                        <%= country %>
+                    </option>
+                    <% } %>
+            </select>
+            <button>Find out</button>
+        </form>
+
+
+    </div>

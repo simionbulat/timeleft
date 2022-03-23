@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate')%>
+    <div>
+        <h2>You have been lived on this planet for
+            <%= data.months_lived %>
+                months
+        </h2>
+        <h3>On average, in your contry of
+            <%= data.location %>
+                , the average life expectancy for your gender is
+                <%= data.timeLeft %> months.
+        </h3>
+        <h3>Here is a graphical representation of this</h3>
+        <div class="representation">
+            <% for (let i=0;i<data.months_lived;i++) { %>
+                <div class="item dateOfBirthItem">*</div>
+                <% }%>
+
+                    <% for (let i=0;i<data.timeLeft-data.months_lived;i++) { %>
+                        <div class="item timeToGo">*</div>
+                        <% }%>
+        </div>
+    </div>
